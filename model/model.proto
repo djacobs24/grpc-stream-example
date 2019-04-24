@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package model;
+
+service Math {
+    rpc Max(stream NumberRequest) returns (stream NumberResponse) {}
+}
+
+message NumberRequest {
+    int32 Number = 1;
+}
+
+message NumberResponse {
+    int32 Result = 1;
+}
