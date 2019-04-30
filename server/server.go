@@ -54,7 +54,7 @@ func (s server) Max(srv model.Math_MaxServer) error {
 		max = req.Number
 
 		// Send it to the stream
-		resp := model.NumberResponse{Result: max}
+		resp := model.NumberResponse{Number: max}
 		if err := srv.Send(&resp); err != nil {
 			log.Printf("Server: Sending error: %v", err)
 		}

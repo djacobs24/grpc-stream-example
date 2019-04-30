@@ -71,7 +71,7 @@ func main() {
 			if err != nil {
 				log.Fatalf("Client: Failed to receive: %v", err)
 			}
-			max = resp.Result
+			max = resp.Number
 			log.Printf("Client: New max %d received", max)
 		}
 	}()
